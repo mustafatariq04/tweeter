@@ -1,21 +1,12 @@
 $(document).ready(function() {
-    $("#new-tweet-textarea").on("change", function(){
-        console.log("change");
-    })
-    $("#new-tweet-textarea").on("keydown", function(){
-        console.log("keydown");
-    })
-    $("#new-tweet-textarea").on("keyup", function(){
-        console.log("keyup");
-    })
-    $("#new-tweet-textarea").on("blur", function(){
-        console.log("blur");
-    })
-    $("#new-tweet-textarea").on("keypress", function(){
-        console.log("keypress");
-    })
+    let counter = 0;
     $("#new-tweet-textarea").on("input", function(){
-        console.log("input");
+        var $btn = $(this);
+        counter = 140 - $btn.val().length;
+        console.log($btn.siblings('.counter')[0].innerHTML)
+        $btn.siblings('.counter')[0].innerHTML = counter;
+        if($btn.siblings('.counter')[0].innerHTML < 0) {
+            $($btn.siblings('.counter')).css("color", "red");
+        }
     })
-    // --- our code goes here ---
-  });
+});
