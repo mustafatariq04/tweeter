@@ -18,8 +18,10 @@
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-    <!-- App JS -->
+    <!-- App JS & Composer Character Counter-->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -34,7 +36,7 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <textarea id="new-tweet-textarea" name="text" placeholder="What are you humming about?"></textarea>
           <input class="tweet-btn" type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
