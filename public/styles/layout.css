@@ -37,7 +37,6 @@ main.container{
  article.tweet {
   border: solid darkgray;    
   border-radius: 10px;
-  border-width: thin;
   margin: 50px 2em 0 2em;
   background-color: #eee;
   opacity: 0.5;
@@ -51,14 +50,24 @@ article.tweet header {
   margin: 0 10px 10px 10px;
   height: 60px;
   padding: 0 10px 0 10px;
-  border-bottom: solid;
-  display: flex;
+  display: relative;
 }
 
-.new-tweet-header {
-  flex-direction: row;
+article.tweet img{
+  float: left;
+  display: inline;
+  margin-top: 5px; 
 }
 
+article.tweet h2 {
+  float: left;
+  display: inline;
+}
+
+article.tweet h5 {
+  float: right;
+  display: inline;
+}
 
 article.tweet p {
     background-color: white;
