@@ -3,7 +3,7 @@
     border-radius: 10px;
     border-width: thin;
     margin: 0 2em 0 2em;
-    background-color: #eee
+    background-color: #eee;
 }
 
 .new-tweet h2 {
@@ -30,4 +30,8 @@ textarea {
 .new-tweet .tweet-btn {
     margin-left: 10px;
     margin-bottom: 10px;
+}
+
+.counter.red {
+    color: red;
 }

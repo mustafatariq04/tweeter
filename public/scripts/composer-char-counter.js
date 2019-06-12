@@ -1,12 +1,12 @@
-$(document).ready(function() {
-    let counter = 0;
+$(document).ready(function() {    
     $("#new-tweet-textarea").on("input", function(){
-        var $btn = $(this);
-        counter = 140 - $btn.val().length;
-        console.log($btn.siblings('.counter')[0].innerHTML)
-        $btn.siblings('.counter')[0].innerHTML = counter;
-        if($btn.siblings('.counter')[0].innerHTML < 0) {
-            $($btn.siblings('.counter')).css("color", "red");
+        var $textarea = $(this);
+        const $remainingChar = 140 - $textarea.val().length;
+        $textarea.siblings('.counter')[0].innerHTML = $remainingChar;
+        if($remainingChar < 0) {
+            $textarea.siblings('.counter').addClass("red");
+        } else {
+            $textarea.siblings('.counter').removeClass("red");
         }
     })
 });
