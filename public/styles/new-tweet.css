@@ -22,12 +22,12 @@ textarea {
     margin-bottom: 5px;
 }
 
-.counter {
+.new-tweet span.counter {
     float: right;
     margin: 5px 10px 0 0;
 }
 
-.tweet-btn {
+.new-tweet .tweet-btn {
     margin-left: 10px;
     margin-bottom: 10px;
 }

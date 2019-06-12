@@ -23,15 +23,55 @@ body {
 }
 
 main.container{
-  top: 140px;
+  padding-top: 140px;
   position: relative;
   width: 450px;
   margin: auto;
   background-color: white;
-  z-index: -1;
 }
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ article.tweet {
+  border: solid darkgray;    
+  border-radius: 10px;
+  border-width: thin;
+  margin: 50px 2em 0 2em;
+  background-color: #eee;
+  opacity: 0.5;
+}
+
+article.tweet:hover {
+  opacity: 1;
+}
+
+article.tweet header {
+  margin: 0 10px 10px 10px;
+  height: 60px;
+  padding: 0 10px 0 10px;
+  border-bottom: solid;
+  display: flex;
+}
+
+.new-tweet-header {
+  flex-direction: row;
+}
+
+
+article.tweet p {
+    background-color: white;
+    display: block;
+    width: 95%;
+    margin: auto;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+article.tweet footer {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+
