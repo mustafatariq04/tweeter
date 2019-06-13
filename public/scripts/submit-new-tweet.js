@@ -1,3 +1,4 @@
+
 $(document).ready(function() {    
     $("form").on("submit", function (event) {
         event.preventDefault();
@@ -13,8 +14,13 @@ $(document).ready(function() {
             $.ajax({
                 method: "POST",
                 url: "/tweets",
-                data: $newTweetInput
-            });
+                data: $newTweetInput,
+                success: function() {
+                    $("#new-tweet-textarea").val('');
+                    $("#tweets-container").empty();
+                    loadTweets();
+                }
+            })
         }    
     });
 });
