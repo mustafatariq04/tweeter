@@ -36,3 +36,13 @@ textarea {
 .counter.red {
     color: red;
 }
+
+#no-characters-entered {
+    display: none;
+    color: red;
+}
+
+#character-limit-exceeded {
+    display: none;
+    color: red;
+}
