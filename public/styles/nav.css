@@ -24,3 +24,18 @@
     float:left;
     margin-left: 10px;
 }
+
+#compose-btn {
+    position: relative;
+    float: right;
+    transform: translateY(30%);
+    background-color: lightblue;
+    width: 116px;
+    font-size: 150%;
+    height: 50px;
+    border-radius: 5px;	
+    margin-right: 50px;
+}
+#compose-btn:hover{
+    background-color: white;
+}

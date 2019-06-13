@@ -9,6 +9,10 @@
 // Test / driver code (temporary). Eventually will get this from the server.
 $(document).ready(function() {   
   loadTweets();
+  $("#compose-btn").on("click", function () {
+    $(".new-tweet").slideToggle(200);
+    $("#new-tweet-textarea").select();
+  })
 });
 
 function escape(str) {
@@ -53,3 +57,7 @@ function loadTweets() {
     renderTweets(tweetDB);
   })
 }
+
+// $("#compose-btn").on("click", function () {
+//   (".new-tweet").slideToggle(1000);
+// })
