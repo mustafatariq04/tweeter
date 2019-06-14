@@ -34,6 +34,16 @@ main.container{
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+
+.icon-footers {
+  float: right;
+  opacity: 0;
+}
+
+article.tweet:hover .icon-footers{
+  opacity: 1;
+}
+
  article.tweet {
   border: solid darkgray;    
   border-radius: 10px;
@@ -82,5 +92,3 @@ article.tweet footer {
   margin-left: 10px;
   margin-bottom: 10px;
 }
-
-

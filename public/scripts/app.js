@@ -23,17 +23,25 @@ function createTweetElement (tweet) {
   const {name, handle} = tweet.user;
   const avatar = tweet.user.avatars.small;
   const tweetMessage = tweet.content.text;
-  const dateCreated = new Date(tweet.created_at);
+  const dateCreated = tweet.created_at;
     
   const $tweetArticle = `
     <article class="tweet">
-    <header>
-      <img class="avatar" src=${avatar}>
-      <h2>${name}</h2>
-      <h5>${handle}</h5>
-    </header>
-    <p>${escape(tweetMessage)}</p>
-    <footer>${dateCreated}</footer>
+      <header>
+        <img class="avatar" src=${avatar}>
+        <h2>${name}</h2>
+        <h5>${handle}</h5>
+      </header>
+      <p>${escape(tweetMessage)}</p>
+      <footer>
+        ${dateCreated}
+        <span class="icon-footers">
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </span>
+      </footer>
+    </article>
     `
   return $tweetArticle;
 } 
@@ -55,7 +63,3 @@ function loadTweets() {
     renderTweets(tweetDB);
   })
 }
-
-// $("#compose-btn").on("click", function () {
-//   (".new-tweet").slideToggle(1000);
-// })
