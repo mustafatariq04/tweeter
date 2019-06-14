@@ -4,9 +4,6 @@
 * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 
-// Test / driver code (temporary). Eventually will get this from the server.
-
-// Test / driver code (temporary). Eventually will get this from the server.
 $(document).ready(function() {   
   loadTweets();
   
@@ -26,7 +23,7 @@ function createTweetElement (tweet) {
   const {name, handle} = tweet.user;
   const avatar = tweet.user.avatars.small;
   const tweetMessage = tweet.content.text;
-  const dateCreated = tweet.created_at;
+  const dateCreated = new Date(tweet.created_at);
     
   const $tweetArticle = `
     <article class="tweet">
