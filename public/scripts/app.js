@@ -23,7 +23,7 @@ function createTweetElement (tweet) {
   const {name, handle} = tweet.user;
   const avatar = tweet.user.avatars.small;
   const tweetMessage = tweet.content.text;
-  const dateCreated = tweet.created_at;
+  const dateCreated = moment.unix(tweet.created_at/1000);
     
   const $tweetArticle = `
     <article class="tweet">
@@ -34,7 +34,7 @@ function createTweetElement (tweet) {
       </header>
       <p>${escape(tweetMessage)}</p>
       <footer>
-        ${dateCreated}
+        ${dateCreated.fromNow()}
         <span class="icon-footers">
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
